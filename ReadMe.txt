@@ -1,4 +1,5 @@
 ﻿https://github.com/okovtun/VPD_311_CS.git
+https://www.youtube.com/playlist?list=PLeqyOOqxeiIPzjdgMyV-nahHoE2Z_eEGM
 
 TODO:
 1. https://github.com/okovtun/BV_011/blob/master/ControlStructures/Geometria/Task/Geometria1.txt
