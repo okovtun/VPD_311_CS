@@ -13,9 +13,42 @@ namespace Calc2
 		{
 			Console.Write("Введите арифметическое выражение: ");
 			//expression = Console.ReadLine();
-			expression = "22+33*44-55/11";
+			expression = "(22+33)*(77*(55-50))/11";
 			Console.WriteLine(expression);
+			Explore(expression);
+			Console.WriteLine(Calculate(expression));
 
+		}
+		static void Explore(string expression)
+		{
+			for (int i = 0; i < expression.Length; i++)
+			{
+				if (expression[i] == '(')
+				{
+					for (int j = i + 1; j < expression.Length; j++)
+					{
+						if (expression[j] == ')')
+						{
+							expression = expression.Replace
+								(
+								expression.Substring(i, j-i+1),	//подменяем часть выражения со скобками, но
+								Calculate(expression.Substring(i + 1, j - i - 1)).ToString()//в Calculate() передаем выражение без скобок
+								);
+							Program.expression = expression;
+							break;
+						}
+						if (expression[j] == '(')
+						{
+							Explore(expression.Substring(j));
+							//Program.expression = expression;
+						}
+					}
+				}
+			}
+		}
+		static double Calculate(string expression)
+		{
+			Console.WriteLine(expression);
 			//char[] delimiters = new char[] { '+', '-', '*', '/' };
 			string[] s_numbers = expression.Split('+', '-', '*', '/');
 			for (int i = 0; i < s_numbers.Length; i++) Console.Write(s_numbers[i] + "\t"); Console.WriteLine();
@@ -34,11 +67,11 @@ namespace Calc2
 			////////////////////////////////////////////////////////////////////////////////////////////
 			for (int i = 0; i < operators.Length; i++)
 			{
-				while(operators[i] == "*" || operators[i] == "/")
+				while (operators[i] == "*" || operators[i] == "/")
 				{
 					if (operators[i] == "*") numbers[i] *= numbers[i + 1];
 					if (operators[i] == "/") numbers[i] /= numbers[i + 1];
-					ShiftLeft(numbers, i+1);
+					ShiftLeft(numbers, i + 1);
 					ShiftLeft(operators, i);
 				}
 			}
@@ -57,6 +90,7 @@ namespace Calc2
 			}
 			Print(numbers);
 			Print(operators);
+			return numbers[0];
 		}
 		static void Print(double[] arr)
 		{
@@ -70,8 +104,6 @@ namespace Calc2
 				Console.Write(arr[i] + "\t");
 			Console.WriteLine();
 		}
-
-
 		static double[] ShiftLeft(double[] arr, int index = 0)
 		{
 			for (int i = index; i < arr.Length - 1; i++)
