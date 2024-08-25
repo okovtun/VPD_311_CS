@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calc2", "Calc2\Calc2.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debug", "Debug\Debug.csproj", "{C6C526B9-A466-42F2-8645-CC4DE37C258F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP", "OOP\OOP.csproj", "{407AF635-32FA-4ACC-9AB0-84E6F8744266}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fraction", "Fraction\Fraction.csproj", "{5B6D1390-FCA0-47F3-A1D7-AD02F0FF1731}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{C6C526B9-A466-42F2-8645-CC4DE37C258F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6C526B9-A466-42F2-8645-CC4DE37C258F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6C526B9-A466-42F2-8645-CC4DE37C258F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{407AF635-32FA-4ACC-9AB0-84E6F8744266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{407AF635-32FA-4ACC-9AB0-84E6F8744266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{407AF635-32FA-4ACC-9AB0-84E6F8744266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{407AF635-32FA-4ACC-9AB0-84E6F8744266}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B6D1390-FCA0-47F3-A1D7-AD02F0FF1731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6D1390-FCA0-47F3-A1D7-AD02F0FF1731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6D1390-FCA0-47F3-A1D7-AD02F0FF1731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6D1390-FCA0-47F3-A1D7-AD02F0FF1731}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

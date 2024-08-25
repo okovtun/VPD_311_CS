@@ -4,6 +4,12 @@ https://www.youtube.com/playlist?list=PLeqyOOqxeiIPzjdgMyV-nahHoE2Z_eEGM
 https://stackoverflow.com/questions/2056445/no-overflow-exception-for-int-in-c
 
 TODO:
+1. Перегрузить операторы +, -;
+2. Перегрузить все операторы сравнения;
+3. Incremento/Decremento (++/--);
+4. Fraction A = new Fraction(2.75);
+
+DONE:
 1. Реализовать калькулятор, который может вычислить выражение любой сложности;
 	22 + 33 - 8 * 4 + 7 / 8;
 2. Добавить в этот калькулятор скобки;
