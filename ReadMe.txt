@@ -4,6 +4,10 @@ https://www.youtube.com/playlist?list=PLeqyOOqxeiIPzjdgMyV-nahHoE2Z_eEGM
 https://stackoverflow.com/questions/2056445/no-overflow-exception-for-int-in-c
 
 TODO:
+1. Сохранить группу в файл;
+2. Загрузить группу из файла;
+
+DONE:
 1. Перегрузить операторы +, -;
 2. Перегрузить все операторы сравнения;
 3. Incremento/Decremento (++/--);
