@@ -63,13 +63,17 @@ namespace Academy
 				{
 					new Student("Pinkman", "Jessie", 25, "Chemistry", "WW_220", 95, 97),
 					new Teacher("White", "Walter", 50, "Chemistry", 25),
-					new Graduate("Schreder", "Hank", 40, "Criminalistic", "OBN", 50, 80, "How to catch Heisenberg")
+					new Graduate("Schreder", "Hank", 40, "Criminalistic", "OBN", 50, 80, "How to catch Heisenberg"),
+					new Student("Vercetty", "Tommy", 30, "Theft", "Vice", 95, 98),
+					new Teacher("Diaz", "Ricardo", 50, "Weapons distribution", 20)
 				};
 			//Specialization:
 			for (int i = 0; i < group.Length; i++)
 			{
 				Console.WriteLine(group[i]);
 			}
+
+
 		}
 	}
 }
