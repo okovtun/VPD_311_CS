@@ -1,11 +1,13 @@
 ﻿//#define INHERITANCE_1
 //#define INHERITANCE_2
+//#define SAVE_TO_FILE
 
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Academy
 {
@@ -58,6 +60,7 @@ namespace Academy
 			Console.WriteLine(t_diaz); 
 #endif
 
+#if SAVE_TO_FILE
 			//Generalization:
 			Human[] group = new Human[]
 				{
@@ -70,10 +73,70 @@ namespace Academy
 			//Specialization:
 			for (int i = 0; i < group.Length; i++)
 			{
-				Console.WriteLine(group[i]);
+				Console.WriteLine(group[i]+";");
 			}
 
+			string filename = "group.csv";
+			Save(group, filename); 
+#endif
 
+			Human[] group = Load("group.csv");
+			Print(group);
+		}
+		static void Print(Human[] group)
+		{
+			for (int i = 0; i < group.Length; i++)
+			{
+				Console.WriteLine(group[i]);
+			}
+		}
+		static void Save(Human[] group, string filename)
+		{
+			StreamWriter sw = new StreamWriter(filename);
+			for (int i = 0; i < group.Length; i++)
+			{
+				sw.WriteLine(group[i].ToFileString());
+			}
+			sw.Close();
+			//CSV - Comma Separated Values.
+			System.Diagnostics.Process.Start("excel", filename);
+		}
+
+		static Human[] Load(string filename)
+		{
+			List<Human> group = new List<Human>();
+
+			try
+			{
+				StreamReader sr = new StreamReader(filename);
+				while (!sr.EndOfStream)
+				{
+					string buffer = sr.ReadLine();
+					//Console.WriteLine(buffer);
+					string[] values = buffer.Split(',', ';');
+					group.Add(HumanFactory(values[0]));
+					group.Last().Init(values);
+				}
+
+				sr.Close();
+			}
+			catch (Exception ex)
+			{
+				Console.WriteLine(ex.Message);
+			}
+			return group.ToArray();
+		}
+		static Human HumanFactory(string type)
+		{
+			Human human = null;
+			switch (type)
+			{
+				case "Teacher":	human = new Teacher("", "", 0, "", 0);break;
+				case "Student":	human = new Student("", "", 0, "", "", 0, 0);break;
+				case "Graduate":human = new Graduate("", "", 0, "", "", 0, 0, "");break;
+				default:		human = new Human("", "", 0); break;
+			}
+			return human;
 		}
 	}
 }

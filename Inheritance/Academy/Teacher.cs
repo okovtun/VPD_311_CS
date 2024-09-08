@@ -48,5 +48,15 @@ namespace Academy
 		{
 			return base.ToString() + $"{Speciality.PadRight(25)}{Experience.ToString().PadRight(5)}";
 		}
+		public override string ToFileString()
+		{
+			return $"{base.ToFileString()},{Speciality},{Experience}";
+		}
+		public override void Init(string[] values)
+		{
+			base.Init(values);
+			Speciality = values[4];
+			Experience = Convert.ToInt32(values[5]);
+		}
 	}
 }

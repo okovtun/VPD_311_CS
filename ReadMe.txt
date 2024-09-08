@@ -4,6 +4,19 @@ https://www.youtube.com/playlist?list=PLeqyOOqxeiIPzjdgMyV-nahHoE2Z_eEGM
 https://stackoverflow.com/questions/2056445/no-overflow-exception-for-int-in-c
 
 TODO:
+1. Из файла '201 RAW.txt' (https://github.com/okovtun/VPD_311_CS/blob/master/Inheritance/FilesCPPtask/201%20RAW.txt)
+   создать файл '201 ready.txt',  в котором столбики MAC и IP-адресом будут поменяны местами;
+2. Из файла '201 RAW.txt' (https://github.com/okovtun/VPD_311_CS/blob/master/Inheritance/FilesCPPtask/201%20RAW.txt)
+   создать файл формата '201.dhcpd' (https://github.com/okovtun/VPD_311_CS/blob/master/Inheritance/FilesCPPtask/201.dhcpd.txt);
+
+   Обе задачи нужно решить как на C++, так и на C#.
+
+3. Реализовать иерархию геометрических фигур: квадрат, прямоугольник, круг, треугольник.......
+   Сгенерировать фигуры в случайном порядке, и для каждой фигуры вывести ее первичные своиства: 
+   длина стороны, радиус .....
+   и вторичные свойства, такие как: площадь и периметр. Каждую фигуру так же нужно нарисовать.
+
+TODO:
 1. Сохранить группу в файл;
 2. Загрузить группу из файла;
 
