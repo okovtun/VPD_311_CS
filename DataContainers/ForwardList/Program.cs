@@ -38,14 +38,6 @@ namespace ForwardList
 			ForwardList list = new ForwardList() { 3, 5, 8, 13, 21 };
 			foreach (int i in list)
 			{
-                Console.Write(i + "\t");
-            }
-            Console.WriteLine();
-
-#endif
-			ForwardList list = new ForwardList() { 3, 5, 8, 13, 21 };
-			foreach (int i in list)
-			{
 				Console.Write(i + "\t");
 			}
 			Console.WriteLine(); 
