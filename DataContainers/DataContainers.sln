@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.34930.48
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForwardList", "ForwardList\ForwardList.csproj", "{6A14F294-F0FE-4857-934D-00D0BAF39134}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A14F294-F0FE-4857-934D-00D0BAF39134}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A14F294-F0FE-4857-934D-00D0BAF39134}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A14F294-F0FE-4857-934D-00D0BAF39134}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A14F294-F0FE-4857-934D-00D0BAF39134}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {757ACCF6-638C-4DE1-B430-2BE0B79982E6}
+	EndGlobalSection
+EndGlobal
