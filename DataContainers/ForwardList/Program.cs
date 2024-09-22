@@ -1,5 +1,5 @@
-﻿//#define BASE_CHECK
-#define HOME_WORK
+﻿#define BASE_CHECK
+//#define HOME_WORK
 using System;
 using System.Collections.Generic;
 using System.Linq;

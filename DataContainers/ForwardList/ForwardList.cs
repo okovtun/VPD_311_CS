@@ -61,7 +61,8 @@ namespace ForwardList
 			{
 				//1) Доходим до нужного элемента:
 				Element Temp = Head;
-				for (int i = 0; i < Index - 1; i++) Temp = Temp.pNext;
+				for (int i = 0; i < Index - 1; i++)
+					Temp = Temp.pNext;
 				//if (Temp.pNext == null) break;
 				//else	Temp = Temp.pNext;
 
