@@ -1,5 +1,5 @@
-﻿#define BASE_CHECK
-//#define HOME_WORK
+﻿//#define BASE_CHECK
+#define HOME_WORK
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,13 +35,24 @@ namespace ForwardList
 #endif
 
 #if HOME_WORK
-			ForwardList list = new ForwardList() { 3, 5, 8, 13, 21 };
+			ForwardList list = new ForwardList() { 3, 5, 8, 13, 21, 34, 55, 89, 144 };
+			list.Print();
 			foreach (int i in list)
 			{
 				Console.Write(i + "\t");
 			}
-			Console.WriteLine(); 
+			Console.WriteLine();
 #endif
 		}
 	}
 }
+/*
+----------------------------------
+I....able
+I - Interface
+able - способен
+IFlyable;
+IMovable;
+ISortable;
+----------------------------------
+ */

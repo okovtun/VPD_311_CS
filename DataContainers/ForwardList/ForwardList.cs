@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ForwardList
 {
-	class ForwardList
+	class ForwardList:IEnumerable
 	{
 		Element Head;
 		public uint Size { get; private set; }
+		public IEnumerator GetEnumerator() => new Enumerator(Head);
+		public void Add(int Data) => push_back(Data);
 		public ForwardList()
 		{
 			Head = null;
@@ -29,14 +32,16 @@ namespace ForwardList
 		//					Adding elements:
 		public void push_front(int Data)
 		{
-			//1) Создаем новый элемент:
-			Element New = new Element(Data);
+			#region FullVersion
+			////1) Создаем новый элемент:
+			//Element New = new Element(Data);
+			////2) Подключаем новый элемент к списку:
+			//New.pNext = Head;
+			////3) Смещаем Голову на новый элемент:
+			//Head = New; 
+			#endregion
 
-			//2) Подключаем новый элемент к списку:
-			New.pNext = Head;
-
-			//3) Смещаем Голову на новый элемент:
-			Head = New;
+			Head = new Element(Data, Head);
 
 			Size++;
 		}
@@ -48,8 +53,7 @@ namespace ForwardList
 				Element Temp = Head;
 				while (Temp.pNext != null)
 					Temp = Temp.pNext;
-				Element New = new Element(Data);
-				Temp.pNext = New;
+				Temp.pNext = new Element(Data);
 				Size++;
 			}
 		}
@@ -67,11 +71,8 @@ namespace ForwardList
 				//else	Temp = Temp.pNext;
 
 				//2) Создаем новый элемент:
-				Element New = new Element(Data);
-
-				//3) Включаем элемент в список:
-				New.pNext = Temp.pNext;
-				Temp.pNext = New;
+				//3) И включаем элемент в список:
+				Temp.pNext = new Element(Data, Temp.pNext);
 				Size++; 
 			}
 		}

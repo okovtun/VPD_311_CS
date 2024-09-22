@@ -5,7 +5,7 @@ https://stackoverflow.com/questions/2056445/no-overflow-exception-for-int-in-c
 
 TODO:
 1. Написать метод erase(), который удаляет элемент из списка по указанному индексу;
-2. Код метода push_front() оптимизировать до одного выражения. Size в оптимихацию не включается;
+2. Код метода push_front() оптимизировать до одного выражения. Size в оптимихацию не включается;	DONE
 3. Проверочный код должен заработать:
 	https://github.com/okovtun/VPD_311_CS/blob/9a932e16bc80eddec40fecb557b885ce0c5014d7/DataContainers/ForwardList/Program.cs#L37C1-L44C7
 
