@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections;
 
 namespace ForwardList
 {
-	class ForwardList
+	class ForwardList:IEnumerable
 	{
 		Element Head;
 		public uint Size { get; private set; }
+		public IEnumerator GetEnumerator() { return Head; }
+		public void Add(int Data) => push_back(Data);
 		public ForwardList()
 		{
 			Head = null;
