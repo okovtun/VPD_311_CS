@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace ForwardList
 {
-	class ForwardList:IEnumerable
+	class ForwardList<T>:IEnumerable
 	{
-		Element Head;
+		Element<T> Head;
 		public uint Size { get; private set; }
-		public IEnumerator GetEnumerator() => new Enumerator(Head);
-		public void Add(int Data) => push_back(Data);
+		public IEnumerator GetEnumerator() => new Enumerator<T>(Head);
+		public void Add(T Data) => push_back(Data);
 		public ForwardList()
 		{
 			Head = null;
@@ -30,7 +30,7 @@ namespace ForwardList
 		}
 
 		//					Adding elements:
-		public void push_front(int Data)
+		public void push_front(T Data)
 		{
 			#region FullVersion
 			////1) Создаем новый элемент:
@@ -41,30 +41,30 @@ namespace ForwardList
 			//Head = New; 
 			#endregion
 
-			Head = new Element(Data, Head);
+			Head = new Element<T>(Data, Head);
 
 			Size++;
 		}
-		public void push_back(int Data)
+		public void push_back(T Data)
 		{
 			if (Head == null) push_front(Data);
 			else
 			{
-				Element Temp = Head;
+				Element<T> Temp = Head;
 				while (Temp.pNext != null)
 					Temp = Temp.pNext;
-				Temp.pNext = new Element(Data);
+				Temp.pNext = new Element<T>(Data);
 				Size++;
 			}
 		}
-		public void insert(int Data, int Index)
+		public void insert(T Data, int Index)
 		{
 			if (Index > Size) return;
 			if (Index == 0) push_front(Data);
 			else
 			{
 				//1) Доходим до нужного элемента:
-				Element Temp = Head;
+				Element<T> Temp = Head;
 				for (int i = 0; i < Index - 1; i++)
 					Temp = Temp.pNext;
 				//if (Temp.pNext == null) break;
@@ -72,7 +72,7 @@ namespace ForwardList
 
 				//2) Создаем новый элемент:
 				//3) И включаем элемент в список:
-				Temp.pNext = new Element(Data, Temp.pNext);
+				Temp.pNext = new Element<T>(Data, Temp.pNext);
 				Size++; 
 			}
 		}
@@ -89,7 +89,7 @@ namespace ForwardList
 			else if (Head.pNext == null) pop_front();
 			else
 			{
-				Element Temp = Head;
+				Element<T> Temp = Head;
 				while (Temp.pNext.pNext != null)
 					Temp = Temp.pNext;
 				Temp.pNext = null;
@@ -100,7 +100,7 @@ namespace ForwardList
 		//					Methods:
 		public void Print()
 		{
-			Element Temp = Head;    //Temp - это итератор.
+			Element<T> Temp = Head;    //Temp - это итератор.
 									//Итератор - это указатель, при помощи которого можно получить доступ к элементам структурыу данных.
 			while (Temp != null)
 			{

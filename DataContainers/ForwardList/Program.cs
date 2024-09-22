@@ -35,13 +35,19 @@ namespace ForwardList
 #endif
 
 #if HOME_WORK
-			ForwardList list = new ForwardList() { 3, 5, 8, 13, 21, 34, 55, 89, 144 };
+			ForwardList<int> list = new ForwardList<int>() { 3, 5, 8, 13, 21, 34, 55, 89, 144 };
 			list.Print();
 			foreach (int i in list)
 			{
 				Console.Write(i + "\t");
 			}
 			Console.WriteLine();
+
+			ForwardList<double> d_list = new ForwardList<double>() { 2.7, 3.4, 5.2, 8.3 };
+			foreach (double i in d_list) Console.Write($"{i}\t"); Console.WriteLine();
+
+			ForwardList<string> s_list = new ForwardList<string>() { "Ах", "ты", "ж", "Ёжтыкин", "ты ", "20" };
+			foreach (string i in s_list) Console.Write($"{i}\t"); Console.WriteLine();
 #endif
 		}
 	}
