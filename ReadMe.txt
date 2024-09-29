@@ -5,22 +5,22 @@ https://stackoverflow.com/questions/2056445/no-overflow-exception-for-int-in-c
 
 TODO:
 1.
-	??? push_back(???);
-	??? pop_front();
-	??? pop_back();
-	??? insert(???);
+	??? push_back(???);		DONE
+	??? pop_front();		DONE
+	??? pop_back();			DONE
+	??? insert(???);		DONE
 	??? erase(???);
 
-2. Решить проблему утечки памяти;
-3. 
-	List list = { 3, 5, 8, 13, 21 };
-	for(int i:list)
+2. Решить проблему утечки памяти;	DONE
+3.	DONE
+	List list = { 3, 5, 8, 13, 21 };DONE
+	for(int i:list)					DONE
 	{
 		cout << i << tab;
 	}
 	cout << endl;
 
-4.
+4.	NRVO - Named Return Value optimisation	DONE
 	List list1 = { 3, 5, 8, 13, 21 };
 	List list2 = { 34, 55, 89 };
 	List list3 = list1 + list2;
@@ -30,8 +30,8 @@ TODO:
 	}
 	cout << endl;
 
-5. В отдельной ветке шаблонизировать двусвязный спискок;
-6. Вынести список в отдельные файлы;
+5. В ветке 'TemplatedList' шаблонизировать двусвязный спискок;
+6. В ветке 'SeparatedList' вынести список в отдельные файлы;
 
 DONE:
 1. Написать метод erase(), который удаляет элемент из списка по указанному индексу;
